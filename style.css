@@ -1,0 +1,29 @@
+
+body {
+  cursor:none;
+}
+h1 {
+  color: #000;
+  display:inline-block;
+  margin:50px;
+  text-align: center;
+  position:relative;
+}
+h1:before {
+  position:absolute;
+  content:attr(data-text);
+  color:#fff;
+  background:#000;
+  clip-path: circle(20px at var(--x,-100%) var(--y,-100%));
+}
+.cursor {
+  position:fixed;
+  width:40px;
+  height:40px;
+  background:#000;
+  border-radius:50%;
+  top:0;
+  left:0;
+  transform:translate(-50%,-50%);
+  z-index:-2;
+}
